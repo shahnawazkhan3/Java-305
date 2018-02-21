@@ -1,0 +1,636 @@
+ ===========Strings Class======
+
+Strings, which are widely used in Java programming,
+ are a sequence of characters. In Java programming language, strings are treated as objects
+
+==================String Methods==============
+
+1)	char charAt(int index)
+
+		Returns the character at the specified index.
+
+2)	int compareTo(Object o)
+
+			Compares this String to another Object.
+
+3)	int compareTo(String anotherString)
+
+			Compares two strings lexicographically.
+
+4)	int compareToIgnoreCase(String str)
+
+		Compares two strings lexicographically, ignoring case differences.
+
+5)	String concat(String str)
+
+		Concatenates the specified string to the end of this string.
+
+6)	boolean contentEquals(StringBuffer sb)
+
+		Returns true if and only if this String represents the same sequence of characters as the specified StringBuffer.
+
+7)	static String copyValueOf(char[] data)
+
+		Returns a String that represents the character sequence in the array specified.
+
+8)	static String copyValueOf(char[] data, int offset, int count)
+
+
+		Returns a String that represents the character sequence in the array specified.
+
+9)	boolean endsWith(String suffix)
+
+		Tests if this string ends with the specified suffix.
+
+10)	boolean equals(Object anObject)
+
+		Compares this string to the specified object.
+
+11)	boolean equalsIgnoreCase(String anotherString)
+
+		Compares this String to another String, ignoring case considerations.
+
+12)	byte getBytes()
+
+		Encodes this String into a sequence of bytes using the platform's default charset, storing the result into a new byte array.
+
+13)	byte[] getBytes(String charsetName)
+
+			Encodes this String into a sequence of bytes using the named charset, storing the result into a new byte array.
+
+14)	void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)
+
+		Copies characters from this string into the destination character array.
+
+15)	int hashCode()
+
+		Returns a hash code for this string.
+
+16)	int indexOf(int ch)
+
+		Returns the index within this string of the first occurrence of the specified character.
+
+17)	int indexOf(int ch, int fromIndex)
+
+		Returns the index within this string of the first occurrence of the specified character, starting the search at the specified index.
+
+18)	int indexOf(String str)
+
+		Returns the index within this string of the first occurrence of the specified substring.
+
+19)	int indexOf(String str, int fromIndex)
+
+		Returns the index within this string of the first occurrence of the specified substring, starting at the specified index.
+
+20)	String intern()
+
+		Returns a canonical representation for the string object.
+
+21)	int lastIndexOf(int ch)
+
+		Returns the index within this string of the last occurrence of the specified character.
+
+22)	int lastIndexOf(int ch, int fromIndex)
+
+		Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index.
+
+23)	int lastIndexOf(String str)
+
+		Returns the index within this string of the rightmost occurrence of the specified substring.
+
+24)	int lastIndexOf(String str, int fromIndex)
+
+		Returns the index within this string of the last occurrence of the specified substring, searching backward starting at the specified index.
+
+25)	int length()
+
+		Returns the length of this string.
+
+26)	boolean matches(String regex)
+
+		Tells whether or not this string matches the given regular expression.
+
+27)	boolean regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len)
+
+		Tests if two string regions are equal.
+
+28)	boolean regionMatches(int toffset, String other, int ooffset, int len)
+
+		Tests if two string regions are equal.
+
+29)	String replace(char oldChar, char newChar)
+
+		Returns a new string resulting from replacing all occurrences of oldChar in this string with newChar.
+
+30)	String replaceAll(String regex, String replacement
+
+		Replaces each substring of this string that matches the given regular expression with the given replacement.
+
+31)	String replaceFirst(String regex, String replacement)
+
+		Replaces the first substring of this string that matches the given regular expression with the given replacement.
+
+32)	String[] split(String regex)
+
+		Splits this string around matches of the given regular expression.
+
+33)	String[] split(String regex, int limit)
+
+		Splits this string around matches of the given regular expression.
+
+34)	boolean startsWith(String prefix)
+
+		Tests if this string starts with the specified prefix.
+
+35)	boolean startsWith(String prefix, int toffset)
+
+		Tests if this string starts with the specified prefix beginning a specified index.
+
+36)	CharSequence subSequence(int beginIndex, int endIndex)
+
+		Returns a new character sequence that is a subsequence of this sequence.
+
+37)	String substring(int beginIndex)
+
+		Returns a new string that is a substring of this string.
+
+38)	String substring(int beginIndex, int endIndex)
+
+		Returns a new string that is a substring of this string.
+
+39)	char[] toCharArray()
+
+		Converts this string to a new character array.
+
+40)	String toLowerCase()
+
+		Converts all of the characters in this String to lower case using the rules of the default locale.
+
+41)	String toLowerCase(Locale locale)
+
+		Converts all of the characters in this String to lower case using the rules of the given Locale.
+
+42)	String toString()
+
+		This object (which is already a string!) is itself returned.
+
+43	String toUpperCase()
+
+		Converts all of the characters in this String to upper case using the rules of the default locale.
+
+44	String toUpperCase(Locale locale)
+
+		Converts all of the characters in this String to upper case using the rules of the given Locale.
+
+45	String trim()
+
+		Returns a copy of the string, with leading and trailing whitespace omitted.
+
+46	static String valueOf(primitive data type x)
+
+		Returns the string representation of the passed data type argument.
+
+==================Java - String charAt() Method========
+
+public char charAt(int index)
+
+
+
+public class Test {
+
+   public static void main(String args[]) {
+      String s = "Strings are immutable";
+      char result = s.charAt(8);
+      System.out.println(result);
+   }
+}
+
+
+================Java - String compareTo() Method==========
+
+int compareTo(Object o)
+
+
+public class Test {
+
+   public static void main(String args[]) {
+
+      String str1 = "Strings are immutable";
+      String str2 = new String("Strings are immutable");
+      String str3 = new String("Integers are not immutable");
+      
+      int result = str1.compareTo( str2 );
+      System.out.println(result);
+      
+      result = str2.compareTo( str3 );
+      System.out.println(result);
+   }
+}
+
+
+=========String compareTo(String anotherString)=====
+
+
+This method compares two strings lexicographically.
+
+public class Test {
+
+   public static void main(String args[]) {
+      String str1 = "Strings are immutable";
+      String str2 = "Strings are immutable";
+      String str3 = "Integers are not immutable";
+      
+      int result = str1.compareTo( str2 );
+      System.out.println(result);
+      
+      result = str2.compareTo( str3 );
+      System.out.println(result);
+      
+      result = str3.compareTo( str1 );
+      System.out.println(result);
+   }
+}
+
+
+=================String compareToIgnoreCase() Method========
+
+int compareToIgnoreCase(String str)
+
+public class Test {
+
+   public static void main(String args[]) {
+      String str1 = "Strings are immutable";
+      String str2 = "Strings are immutable";
+      String str3 = "Integers are not immutable";
+
+      int result = str1.compareToIgnoreCase( str2 );
+      System.out.println(result);
+
+      result = str2.compareToIgnoreCase( str3 );
+      System.out.println(result);
+
+      result = str3.compareToIgnoreCase( str1 );
+      System.out.println(result);
+   }
+}
+
+
+0
+10
+10
+
+
+===========Java - String concat() Method============
+
+public String concat(String s)
+
+
+public class Test {
+
+   public static void main(String args[]) {
+      String s = "Strings are immutable";
+      s = s.concat(" all the time");
+      System.out.println(s);
+   }
+}
+
+
+======
+Strings are immutable all the time
+
+
+===================Java - String contentEquals() Method================
+
+Here is the syntax of this method -
+
+public boolean contentEquals(StringBuffer sb)
+
+
+
+public class Test {
+
+   public static void main(String args[]) {
+      String str1 = "Not immutable";
+      String str2 = "Strings are immutable";
+      StringBuffer str3 = new StringBuffer( "Not immutable");
+
+      boolean  result = str1.contentEquals( str3 );
+      System.out.println(result);
+	  
+      result = str2.contentEquals( str3 );
+      System.out.println(result);
+   }
+}
+
+
+===============Java - String copyValueOf() Method===========
+
+This method returns a String that represents the character sequence in the array specified.
+
+
+public class Test {
+
+   public static void main(String args[]) {
+      char[] Str1 = {'h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd'};
+      String Str2 = "";
+      Str2 = Str2.copyValueOf( Str1 );
+      System.out.println("Returned String: " + Str2);
+   }
+}
+
+
+
+==========String copyValueOf(data, offset, count)==========
+
+public static String copyValueOf(char[] data, int offset, int count)
+
+
+public class Test {
+
+   public static void main(String args[]) {
+      char[] Str1 = {'h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd'};
+      String Str2 = "";
+      Str2 = Str2.copyValueOf( Str1, 2, 6 );
+      System.out.println("Returned String: " + Str2);
+   }
+}
+
+
+==========Java - String endsWith() Method=========
+
+public boolean endsWith(String suffix)
+
+
+public class Test {
+
+   public static void main(String args[]) {
+      String Str = new String("This is really not immutable!!");
+      boolean retVal;
+
+      retVal = Str.endsWith( "immutable!!" );
+      System.out.println("Returned Value = " + retVal );
+
+      retVal = Str.endsWith( "immu" );
+      System.out.println("Returned Value = " + retVal );
+   }
+}
+
+
+Returned Value = true
+Returned Value = false
+
+
+===========Java - String equals() Method========
+
+public boolean equals(Object anObject)
+
+
+public class Test {
+
+   public static void main(String args[]) {
+      String Str1 = new String("This is really not immutable!!");
+      String Str2 = Str1;
+      String Str3 = new String("This is really not immutable!!");
+      boolean retVal;
+
+      retVal = Str1.equals( Str2 );
+      System.out.println("Returned Value = " + retVal );
+
+      retVal = Str1.equals( Str3 );
+      System.out.println("Returned Value = " + retVal );
+   }
+}
+
+Returned Value = true
+Returned Value = true
+
+=============Java - String equalsIgnoreCase() Method=========
+
+public boolean equalsIgnoreCase(String anotherString)
+
+
+public class Test {
+
+   public static void main(String args[]) {
+      String Str1 = new String("This is really not immutable!!");
+      String Str2 = Str1;
+      String Str3 = new String("This is really not immutable!!");
+      String Str4 = new String("This IS REALLY NOT IMMUTABLE!!");
+      boolean retVal;
+
+      retVal = Str1.equals( Str2 );
+      System.out.println("Returned Value = " + retVal );
+
+      retVal = Str1.equals( Str3 );
+      System.out.println("Returned Value = " + retVal );
+
+      retVal = Str1.equalsIgnoreCase( Str4 );
+      System.out.println("Returned Value = " + retVal );
+   }
+}
+
+
+=============Java – String getBytes() Method==========
+
+
+public byte[] getBytes()
+
+
+import java.io.*;
+public class Test {
+
+   public static void main(String args[]) {
+      String Str1 = new String("Welcome to zaaviyah.com");
+      
+      try {
+         String Str2 = new String( Str1.getBytes( "UTF-8" ));
+         System.out.println("Returned Value " + Str2 );
+         Str2 = new String (Str1.getBytes( "ISO-8859-1" ));
+         System.out.println("Returned Value " + Str2 );
+      } catch ( UnsupportedEncodingException e) {
+         System.out.println("Unsupported character set");
+      }
+   }
+}
+
+
+Returned Value Welcome to zaaviyah.com
+Returned Value Welcome
+
+===============String getBytes(String charsetName)========
+
+public byte[] getBytes(String charsetName) throws UnsupportedEncodingException
+
+
+import java.io.*;
+public class Test {
+
+   public static void main(String args[]) {
+      String Str1 = new String("Welcome to Tutorialspoint.com");
+      try {
+         String Str2 = new String(Str1.getBytes( "UTF-8" ));
+         System.out.println("Returned Value " + Str2 );
+         Str2 = new String (Str1.getBytes( "ISO-8859-1" ));
+         System.out.println("Returned Value " + Str2 );
+      } catch ( UnsupportedEncodingException e) {
+         System.out.println("Unsupported character set");
+      }
+   }
+}
+
+
+==============Java - String getChars() Method===================
+
+
+
+public void getChars(int srcBegin, int srcEnd, char[] dst,  int dstBegin)
+
+
+
+.
+
+
+
+
+import java.io.*;
+public class Test {
+
+   public static void main(String args[]) {
+      String Str1 = new String("Welcome to Tutorialspoint.com");
+      char[] Str2 = new char[7];
+      try {
+         Str1.getChars(2, 9, Str2, 0);
+         System.out.print("Copied Value = " );
+         System.out.println(Str2 );
+      } catch ( Exception ex) {
+         System.out.println("Raised exception...");
+      }
+   }
+}
+
+
+
+============Java - String hashCode() Method================
+
+
+
+
+
+
+public int hashCode()
+
+
+import java.io.*;
+public class Test {
+
+   public static void main(String args[]) {
+      String Str = new String("Welcome to Tutorialspoint.com");
+      System.out.println("Hashcode for Str :" + Str.hashCode() );
+   }
+}
+
+
+
+Hashcode for Str :1186874997
+
+
+===============Java – String indexOf() Method==================
+
+
+
+public int indexOf(char ch)
+
+
+
+import java.io.*;
+public class Test {
+
+   public static void main(String args[]) {
+      String Str = new String("Welcome to Tutorialspoint.com");
+      System.out.print("Found Index :" );
+      System.out.println(Str.indexOf( 'o' ));
+   }
+}
+
+
+
+Found Index :4
+
+
+
+================String indexOf(int ch, int fromIndex)===========
+
+
+public int indexOf(int ch, int fromIndex)
+
+
+
+import java.io.*;
+public class Test {
+
+   public static void main(String args[]) {
+      String Str = new String("Welcome to Tutorialspoint.com");
+      System.out.print("Found Index :" );
+      System.out.println(Str.indexOf( 'o', 5 ));
+   }
+}
+
+
+=================Java – String indexOf(String str) Method===============
+
+
+int indexOf(String str)
+import java.io.*;
+public class Test {
+
+   public static void main(String args[]) {
+      String Str = new String("Welcome to Tutorialspoint.com");
+      String SubStr1 = new String("Tutorials");
+      System.out.println("Found Index :" + Str.indexOf( SubStr1 ));
+   }
+}
+
+
+
+==============String indexOf(String str, int fromIndex)===========
+
+
+int indexOf(String str, int fromIndex)
+
+
+
+import java.io.*;
+public class Test {
+
+   public static void main(String args[]) {
+      String Str = new String("Welcome to Tutorialspoint.com");
+      String SubStr1 = new String("Tutorials" );
+      System.out.print("Found Index :" );
+      System.out.println( Str.indexOf( SubStr1, 15 ));
+   }
+}
+
+
+
+
+=============Java - String intern() Method============
+
+
+public String intern()
+
+import java.io.*;
+public class Test {
+
+   public static void main(String args[]) {
+      String Str1 = new String("Welcome to Tutorialspoint.com");
+      String Str2 = new String("WELCOME TO SUTORIALSPOINT.COM");
+
+      System.out.print("Canonical representation:" );
+      System.out.println(Str1.intern());
+
+      System.out.print("Canonical representation:" );
+      System.out.println(Str2.intern());
+   }
+}
+
+
