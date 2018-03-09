@@ -1,0 +1,60 @@
+2)Resturant Management System
+                                             Module-1
+1)Desk no array     [1,2,3,4,5,6]
+2)Pakistani menu
+   total include 15 products
+like     Biryani      Rs. 300
+3)Chineese menu
+   total incluse 20 products
+
+
+Refreshment
+i) Tea           Rs. 20
+ii)Mineral water Rs. 30
+
+       After select items go request.
+
+
+
+Kitchen
+i)  Name
+ii) Menu
+iii)Time duration
+
+
+
+
+Cashier
+i)  Desk no:
+ii) item 1
+iii)item 2
+iv) item 3
+V) Total amount print
+
+3)Shopping App
+                                               Module-1
+1) Mans array            [T.shirts.jeans,watch]
+2) Woman array           [Shits,jeans,Watch]
+3) HomeApplainces array  [Kitchen set,Iron]    total 20 product
+4) Books Shop
+   Array inside multiple array
+   short array [Large,small,Medium]
+   Amount will be shown also
+
+After select print out all this data
+
+Category Multiply:
+Man total [Shirt,jeans,T.shirts]
+Total 30 product 
+
+Every product print out data.
+
+                                                Module-2
+Login System:
+1) Name
+2) fullname
+3) Nic no:
+4) Contact no:
+5) City
+6) Country
+7) Picture
