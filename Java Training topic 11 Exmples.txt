@@ -1,0 +1,254 @@
+java traing topic
+
+
+====================//Add two numbers using Java Program=================
+
+
+import java.util.*;
+public class Add {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		 int a,b,add;
+         /*scanner class object to read values*/
+         Scanner buf=new Scanner(System.in); 
+          
+         System.out.print("Enter first number: ");
+         a=buf.nextInt();
+         System.out.print("Enter second number: ");
+         b=buf.nextInt();
+          
+         add= a+b;
+          
+         System.out.println("Addition is: " + add);
+	}
+
+}
+
+
+
+===========Java program to swap two numbers with and without using third variable===========
+
+Using third variable
+Here, we will use a temporary variable to swap the numbers.
+Without using third variable
+Here we will not use any temporary variable to swap the numbers
+ 
+1)      Swapping of numbers using third variable
+
+
+
+import java.util.*;
+
+public class SwapTwoNumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a,b;
+		//Scanner class to read value
+		Scanner sc=new Scanner(System.in);
+
+		System.out.print("Enter value of a: ");
+		a=sc.nextInt();
+		System.out.print("Enter value of a: ");
+		b=sc.nextInt();
+
+		System.out.println("Before swapping - a: "+ a +", b: " + b);
+		////using thrid variable
+		int temp;
+		temp=a;
+		a=b;
+		b=temp;
+		//////////////////////
+		System.out.println("After swapping  - a: "+ a +", b: " + b);
+	}
+
+}
+
+2) 		Swapping of numbers without using third variable
+
+
+
+import java.util.*;
+public class SwapTwoNumbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a,b;
+		//Scanner class to read value
+		Scanner sc=new Scanner(System.in);
+
+		System.out.print("Enter value of a: ");
+		a=sc.nextInt();
+		System.out.print("Enter value of a: ");
+		b=sc.nextInt();
+
+		System.out.println("Before swapping - a: "+ a +", b: " + b);
+		////without using thrid variable
+		a=a+b;
+		b=a-b;
+		a=a-b;
+		//////////////////////
+		System.out.println("After swapping  - a: "+ a +", b: " + b);
+	}
+
+}
+
+
+
+======================Java program for Calculator================
+
+
+
+import java.util.*;
+public class Calculator {
+
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		 int a,b,choice;
+         float result=0;
+         /*scanner class object to read values*/
+         Scanner buf=new Scanner(System.in); 
+          
+         System.out.print("Enter first number: ");
+         a=buf.nextInt();
+         System.out.print("Enter second number: ");
+         b=buf.nextInt();
+          
+         System.out.print("\n1: Addition.\n2: Subtraction.");
+         System.out.print("\n3: Multiplication.\n4: Divide.");
+         System.out.print("\n5: Remainder.\n6: Exit.");
+          
+         System.out.print("\nEnter your choice: ");
+         choice=buf.nextInt();
+          
+         switch(choice)
+         {
+             case 1:
+                 result=(a+b); break;
+             case 2:
+                 result=(a-b); break;
+             case 3:
+                 result=(a*b); break;
+             case 4:
+                 result=(float)((float)a/(float)b); break;
+             case 5:
+                 result=(a%b); break;
+             default:
+                 System.out.println("An Invalid Choice!!!\n");
+         }
+         if(choice>=1 && choice<=5)
+            System.out.println("Result is: " + result);
+
+	}
+
+}
+
+
+==================find Largest of Three Numbers.=========
+
+
+import java.util.*;
+public class LargestNumber {
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     
+		 int a=0,b=0,c=0;
+         int largest=0;
+         //Scanner class to take user input.
+         Scanner X = new Scanner(System.in);
+          
+         System.out.print("Enter First No. :");
+         a = X.nextInt(); //read integer number
+          
+         System.out.print("Enter Second No. :");
+         b = X.nextInt(); //read integer number
+          
+         System.out.print("Enter Third No. :");
+         c = X.nextInt(); //read integer number
+          
+         if( a>b && a> c)
+             largest = a;
+         else if(b>a && b>c)
+             largest = b;
+         else
+             largest = c;
+          
+         System.out.println("Lagest Number is : "+largest);
+	}
+
+}
+
+
+===================Java program to calculate Simple Interest.=======
+import java.util.*;
+public class SimpleInterest {
+
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 double p=0,r=0,t=0,si=0;
+         
+	        //Scanner class to take user input.
+	        Scanner X = new Scanner(System.in);
+	         
+	        System.out.print("Enter Principle : ");
+	        p = X.nextFloat();
+	         
+	        System.out.print("Enter Rate of Interest: ");
+	        r =  X.nextFloat();
+	         
+	        System.out.print("Enter Time in years : ");
+	        t =  X.nextFloat();
+	         
+	        //Formula of simple interest.
+	        si = (p*r*t)/100;
+	         
+	        System.out.print("Simple Interest is :"+si+"\n");
+	}
+
+}
+===========EMI Calculator in Java - Java program to calculate EMI========
+
+
+import java.util.*;
+public class EmiCalc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        
+		 //Scanner class to take user input.
+        Scanner X = new Scanner(System.in);
+         
+        double principal, rate, time, emi;
+  
+        System.out.print("Enter principal: ");
+        principal = X.nextFloat();
+      
+        System.out.print("Enter rate: ");
+        rate = X.nextFloat();
+      
+        System.out.print("Enter time in year: ");
+        time = X.nextFloat();
+      
+        rate=rate/(12*100); /*one month interest*/
+        time=time*12; /*one month period*/
+      
+      
+        emi= (principal*rate*Math.pow(1+rate,time))/(Math.pow(1+rate,time)-1);
+      
+        System.out.print("Monthly EMI is= "+emi+"\n");
+	}
+
+}
+
+

@@ -1,0 +1,287 @@
+
+====================Perimeter of a Circle.============
+
+import java.util.*;
+public class PerimeterCircle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 double radius;
+	        Scanner sc=new Scanner(System.in);
+	         
+	         // input radius of circle
+	        System.out.print("Enter the Radius of Circle : ");
+	        radius=sc.nextDouble(); 
+	         
+	        // circle parameter is 2 * pie * radius 
+	        double Perimeter=2*3.14*radius;
+	         
+	        System.out.print("Perimeter of Circle : " + Perimeter);
+	}
+
+}
+
+========Calculate Area of a Circle.===========
+
+//Java program to Calculate Area of a Circle.
+ 
+import java.util.Scanner;
+ 
+public class AreaCircle {
+ 
+    public static void main(String[] args) {
+ 
+        double radius;
+        Scanner sc=new Scanner(System.in);
+         
+         // input radius of circle
+        System.out.print("Enter the Radius of Circle : ");
+        radius=sc.nextDouble(); 
+         
+        // circle area is pie * radius square
+        double area=3.14*radius*radius;
+         
+        System.out.print("Area of Circle : "+area);
+         
+    }
+ 
+}
+
+===============//Java program to Calculate Area of a Circle.=====////
+
+
+
+import java.util.Scanner;
+public class AreaCircle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 double radius;
+	        Scanner sc=new Scanner(System.in);
+	         
+	         // input radius of circle
+	        System.out.print("Enter the Radius of Circle : ");
+	        radius=sc.nextDouble(); 
+	         
+	        // circle area is pie * radius square
+	        double area=3.14*radius*radius;
+	         
+	        System.out.print("Area of Circle : "+area);
+	}
+
+}
+
+
+==================Area of Rectangle=================
+
+
+import java.util.*;
+public class AreaRectangle {
+
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       
+		double length,width,area;
+        
+        Scanner sc=new Scanner(System.in);
+         
+        //Read Length and Width of Rectangle
+        System.out.print("Enter length: ");
+        length=sc.nextDouble();
+        System.out.print("Enter width: ");
+        width=sc.nextDouble();
+         
+        //Calculate Area 
+        area= length*width;
+         
+        //Print Result
+        System.out.println("Area of Rectangle: " + area); 
+	}
+
+}
+
+================Using Function/Method===============
+
+import java.util.*;
+public class AreaRectangle1 {
+
+	
+	
+
+	
+	 //Function to find Area of Rectangle
+    public static double AreaOfRectangle(double l, double w)
+    {
+        double area;
+        area=l*w;
+        return area;
+    }
+     
+     public static void main(String []args){
+        double length,width,area;
+         
+        Scanner sc=new Scanner(System.in);
+         
+        //Read Length and Width of Rectangle
+        System.out.print("Enter length: ");
+        length=sc.nextDouble();
+        System.out.print("Enter width: ");
+        width=sc.nextDouble();
+         
+        //Find Area - Calling Functionn
+        area= AreaOfRectangle(length, width);
+         
+        //Print Result
+        System.out.println("Area of Rectangle: " + area);    
+         
+
+     }
+}
+
+==================Tringle===========
+
+import java.util.*;
+public class Triangle {
+
+    public static void main(String []args){
+        double base,height,area;
+         
+        Scanner sc=new Scanner(System.in);
+         
+        //Read Length and Width of Triangle
+        System.out.print("Enter Base Widht: ");
+        base=sc.nextDouble();
+        System.out.print("Enter Height: ");
+        height=sc.nextDouble();
+         
+        //Calculate Area
+        area = (base*height)/2;
+         
+        //Print Result
+        System.out.println("Area of Triangle: " + area);    
+         
+     }
+
+}
+
+
+==============  
+import java.util.*;
+public class Triangle {
+
+	  //Function to find Area of Trianle
+    public static double AreaOfTriangle(double b, double h)
+    {
+        double area;
+        area= (b*h)/2;
+        return area;
+    }
+     
+     public static void main(String []args){
+        double base,height,area;
+         
+        Scanner sc=new Scanner(System.in);
+         
+        //Read Length and Width of Triangle
+        System.out.print("Enter Base Widht: ");
+        base=sc.nextDouble();
+        System.out.print("Enter Height: ");
+        height=sc.nextDouble();
+         
+        //Find Area - Calling Functionn
+        area= AreaOfTriangle(base, height);
+         
+        //Print Result
+        System.out.println("Area of Triangle: " + area);    
+         
+     }
+
+}
+
+
+====================Fibonacci Series.===============\
+
+  public static void main(String[] args) {
+         
+        int SeriesNum ;
+        Scanner sc=new Scanner(System.in);
+         
+        System.out.print("Enter the length of fibonacci series : ");
+        SeriesNum=sc.nextInt();
+         
+             int[] num = new int[SeriesNum];
+             num[0] = 0;
+             num[1] = 1;
+            //number should be sum of last two numbers of Series     
+             for(int i=2; i < SeriesNum; i++){
+                 num[i] = num[i-1] + num[i-2];
+             }
+      
+             System.out.println("fibonacci series : ");
+             for(int i=0; i< SeriesNum; i++){
+                     System.out.print(num[i] + " ");
+             }
+    }
+
+
+================Factorial=====
+
+import java.util.*;
+ 
+public class Factorial
+{
+    public static void main(String args[]){
+        int num;
+        long factorial;
+         
+        Scanner bf=new Scanner(System.in);
+         
+        //input an integer number
+        System.out.print("Enter any integer number: ");
+        num= bf.nextInt();
+         
+        //find factorial
+        factorial=1;
+        for(int loop=num; loop>=1; loop--)
+            factorial*=loop;
+         
+        System.out.println("Factorial of " + num + " is: " + factorial);
+    }
+}
+=====
+//Java program for Factorial - to find Factorial of a Number.
+ 
+import java.util.*;
+ 
+public class Factorial
+{
+    //function to find factorial
+    public static long findFactorial(int num)
+    {
+        long fact=1;
+         
+        for(int loop=num; loop>=1; loop--)
+            fact*=loop;
+             
+        return fact;
+    }
+     
+    public static void main(String args[]){
+        int num;
+        long factorial;
+         
+        Scanner bf=new Scanner(System.in);
+         
+        /*input an integer number*/
+        System.out.print("Enter any integer number: ");
+        num= bf.nextInt();
+         
+        /*find factorial*/
+        factorial=findFactorial(num);
+         
+        System.out.println("Factorial of " + num + " is: " + factorial);
+    }
+}
+
