@@ -1,0 +1,80 @@
+8)Office Management System
+                                                  Module-1
+1) Employee name
+2) Employee fullname
+3) Contact no:
+4) generate office id
+5) Salary fix
+6) Gender
+7) Status
+
+Accounting module
+1) Salary
+2) Fix salary
+3) Allowance per month
+4) Tax salary
+5) print out total amount of employee and their salary respectively
+
+                                                   Module-3
+1) Product total 20items
+2) Every product rate 
+3) product delievry rate
+4) after product show total amount
+
+HR
+                                                   Module-4
+1) Jod launch array     [A,B,C,D]
+2) get shortlist array [A,B,C]
+3) Interview Call 
+
+
+Interview Checking
+i)  Appearance
+ii) Skills
+iii)Salary decided
+iv) Request send GM
+v)  Appointment date show
+vi) Final voucher show
+vii)print appointmnet letter
+
+                                                Module-5
+Old employees
+ 1)Employee name
+ 2)Employee pension per month
+ 3)Employee old benfit
+
+
+
+7)Car Lefts Apps 
+                                                 Module-1
+1) Name
+2) Fullname
+3) Nic no:
+4) Cell no:
+5) Address
+6) Car module  [Year,Color]
+7) Register id show
+8) Road array  [1,2,3,4]
+
+Passenger area 
+                                                 Module-2
+1) Name
+2) Fullname
+3) Request after generated
+4) when road match, car match
+5) Contact no:
+6) Nic no:
+7) when same condition change the route
+
+                                                  Module-3
+1) Road box rate, pr km
+2) Road different box
+3) Get address of area
+4) Distance b/w road and person
+
+                                                  Module-4
+1) per box charges 50km
+2) Advance charges perkm
+
+
+
